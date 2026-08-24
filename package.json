@@ -1,18 +1,31 @@
 {
-  "name": "builder",
-  "private": true,
-  "version": "0.0.0",
+  "name": "rebuilder-framework-cli",
+  "version": "1.1.0",
   "type": "module",
   "main": "dist/electron/main.cjs",
+  "files": [
+    "dist",
+    "src/cli/dist",
+    "src/system",
+    "src/config",
+    "src/compiler",
+    "src/hooks",
+    "src/libs",
+    "src/electron",
+    "ui",
+    "tsconfig.json",
+    "index.html",
+    "global.d.ts"
+  ],
   "bin": {
-    "create-router": "./cli/dist/index.js",
-    "rebuilder": "./cli/dist/index.js"
+    "create-router": "src/cli/dist/index.js",
+    "rebuilder": "src/cli/dist/index.js"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:cli": "npm --prefix cli run build",
-    "create-router": "node cli/dist/index.js",
+    "build:cli": "npm --prefix src/cli run build",
+    "create-router": "node src/cli/dist/index.js",
     "preview": "vite preview"
   },
   "devDependencies": {

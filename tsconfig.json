@@ -1,0 +1,68 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2020"
+    ],
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@rebuilder/system": [
+        "src/system"
+      ],
+      "@rebuilder/system/*": [
+        "src/system/*"
+      ],
+      "@rebuilder/config": [
+        "src/config"
+      ],
+      "@rebuilder/config/*": [
+        "src/config/*"
+      ],
+      "@rebuilder/electron": [
+        "src/electron/src"
+      ],
+      "@rebuilder/electron/*": [
+        "src/electron/src/*"
+      ],
+      "@rebuilder/cli": [
+        "cli/src"
+      ],
+      "@rebuilder/cli/*": [
+        "cli/src/*"
+      ],
+      "@rebuilder/core": [
+        "src/electron/src/types"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "global.d.ts",
+    "cli/**/*.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

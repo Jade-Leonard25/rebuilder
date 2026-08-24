@@ -1,0 +1,54 @@
+{
+  "name": "rebuilder-vscode",
+  "displayName": "Rebuilder",
+  "description": "Language support, syntax highlighting, and snippets for Rebuilder files",
+  "version": "1.0.0",
+  "publisher": "rebuilder",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "rebuilder",
+    "r-function",
+    "reactive",
+    "electron",
+    "desktop",
+    "framework"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "rebuilder",
+        "aliases": [
+          "Rebuilder",
+          "rebuilder"
+        ],
+        "extensions": [
+          ".rebuilder"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rebuilder",
+        "scopeName": "source.rebuilder",
+        "path": "./syntaxes/rebuilder.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.ts": "typescript"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "rebuilder",
+        "path": "./snippets/rebuilder.json"
+      }
+    ]
+  }
+}

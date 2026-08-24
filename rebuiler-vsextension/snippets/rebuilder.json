@@ -1,0 +1,125 @@
+{
+  "Rebuilder Page": {
+    "prefix": "reb-page",
+    "body": [
+      "export const metadata = {",
+      "  title: '${2:Page Title}',",
+      "  path: '/${1:my-page}',",
+      "  requireAuth: false,",
+      "  window: {",
+      "    width: 1200,",
+      "    height: 800,",
+      "  },",
+      "};",
+      "",
+      "export default function ${3:PageName}() {",
+      "  const count = useState(0);",
+      "",
+      "  function handleAction() {",
+      "    count.update(c => c + 1);",
+      "  }",
+      "",
+      "  return r.div(",
+      "    { className: 'p-8 bg-slate-900 text-white min-h-screen space-y-6' },",
+      "",
+      "    r.h1({ className: 'text-3xl font-bold' }, '${2:Page Title}'),",
+      "",
+      "    r.div(",
+      "      { className: 'flex items-center gap-4' },",
+      "",
+      "      r.button(",
+      "        {",
+      "          className: 'px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 cursor-pointer font-medium',",
+      "          onClick: handleAction,",
+      "        },",
+      "        'Click Me',",
+      "      ),",
+      "",
+      "      r.span(",
+      "        { className: 'text-xl font-mono text-emerald-400 font-bold' },",
+      "        'Count: ' + count.value,",
+      "      ),",
+      "    ),",
+      "  );",
+      "}",
+      "$0"
+    ],
+    "description": "Scaffold a complete Rebuilder page with r() syntax"
+  },
+  
+  "Rebuilder Component": {
+    "prefix": "reb-comp",
+    "body": [
+      "export default function ${1:ComponentName}() {",
+      "  return r.div(",
+      "    { className: '$2' },",
+      "    $0",
+      "  );",
+      "}"
+    ],
+    "description": "Scaffold a Rebuilder component"
+  },
+  
+  "Rebuilder State": {
+    "prefix": "reb-state",
+    "body": [
+      "const ${1:stateName} = useState(${2:initialValue});"
+    ],
+    "description": "Declare state with useState"
+  },
+  
+  "Rebuilder Button": {
+    "prefix": "reb-button",
+    "body": [
+      "r.button(",
+      "  {",
+      "    className: '${1:px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700}',",
+      "    onClick: ${2:handleClick},",
+      "  },",
+      "  '${3:Click Me}',",
+      "),"
+    ],
+    "description": "Create a button element"
+  },
+  
+  "Rebuilder Input": {
+    "prefix": "reb-input",
+    "body": [
+      "r.input({",
+      "  className: '${1:px-3 py-2 border border-gray-300 rounded}',",
+      "  placeholder: '${2:Type here...}',",
+      "  onInput: ${3:handleInput},",
+      "}),"
+    ],
+    "description": "Create an input element"
+  },
+  
+  "Rebuilder Navigation": {
+    "prefix": "reb-nav",
+    "body": [
+      "router.navigate('${1:/destination}');"
+    ],
+    "description": "Navigate to a route"
+  },
+  
+  "Rebuilder Condition": {
+    "prefix": "reb-if",
+    "body": [
+      "${1:condition} ? r.div($0) : null,"
+    ],
+    "description": "Conditional rendering"
+  },
+  
+  "Rebuilder Loop": {
+    "prefix": "reb-for",
+    "body": [
+      "${1:items}.map(item => ",
+      "  r.div(",
+      "    { key: item.id, className: '$2' },",
+      "    $0",
+      "  ),",
+      "),"
+    ],
+    "description": "List iteration"
+  }
+}

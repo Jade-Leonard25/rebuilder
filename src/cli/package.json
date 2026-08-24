@@ -1,0 +1,21 @@
+{
+  "name": "create-router",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "create-router": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^26.2.0",
+    "typescript": "~6.0.2"
+  }
+}

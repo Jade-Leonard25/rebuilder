@@ -1,0 +1,38 @@
+{
+  "name": "builder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/electron/main.cjs",
+  "bin": {
+    "create-router": "./cli/dist/index.js",
+    "rebuilder": "./cli/dist/index.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:cli": "npm --prefix cli run build",
+    "create-router": "node cli/dist/index.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.10",
+    "@types/node": "^26.2.0",
+    "electron": "^43.4.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "chalk": "^6.0.0",
+    "clsx": "^2.1.1",
+    "commander": "^15.0.0",
+    "fs-extra": "^11.4.0",
+    "path": "^0.12.7",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3",
+    "vite-plugin-electron": "^1.1.1",
+    "vite-plugin-electron-renderer": "^1.0.0"
+  }
+}

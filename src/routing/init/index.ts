@@ -1,3 +1,5 @@
+import { r } from '@rebuilder/system';
+
 export const metadata = {
   title: 'Init',
   path: '/init',

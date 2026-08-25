@@ -28,9 +28,9 @@ export default defineConfig({
             rollupOptions: {
               external: ['electron'],
               output: {
-                format: 'cjs',
-                entryFileNames: '[name].cjs',
-                chunkFileNames: '[name].cjs',
+                format: 'es',
+                entryFileNames: '[name].mjs',
+                chunkFileNames: '[name].mjs',
                 assetFileNames: '[name].[ext]'
               }
             },
@@ -52,9 +52,9 @@ export default defineConfig({
             rollupOptions: {
               external: ['electron'],
               output: {
-                format: 'cjs',
-                entryFileNames: '[name].cjs',
-                chunkFileNames: '[name].cjs',
+                format: 'es',
+                entryFileNames: '[name].mjs',
+                chunkFileNames: '[name].mjs',
                 assetFileNames: '[name].[ext]'
               }
             }

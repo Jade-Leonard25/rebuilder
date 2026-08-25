@@ -10,3 +10,6 @@ export * from './refs';
 export * from './fragment';
 export * from './control-flow';
 export { r, rProxy as default, createElement } from './factory';
+
+// Alias for common React-like API
+export { objectFunction as useState } from './state';

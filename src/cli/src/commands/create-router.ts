@@ -104,7 +104,7 @@ function generatePage(
   routePath: string
 ): string {
   return `import type { RouteContext } from '@rebuilder/config/config';
-import { r } from '@rebuilder/system/factory';
+import { r } from '@rebuilder/system';
 
 export const metadata = {
   title: '${componentName}',

@@ -20,7 +20,7 @@ import {
   useRef,
   createRef,
   Fragment,
-} from '@/system/factorysystem/config';
+} from '@rebuilder/system';
 
 export const metadata = ${metadataJson};
 
